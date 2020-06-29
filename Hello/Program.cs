@@ -10,6 +10,9 @@ namespace Hello
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Witaj");
+            Console.ReadKey(); //oczekuje na wciśnięcie klawisza
+            
         }
     }
 }
