@@ -10,7 +10,7 @@ namespace StudentDiary
     {
         //Stan (zmienne - pola)
 
-        List<float> ratings; ///Utworzenie listy przechowująca zmienne typu float (oceny)
+        List<float> ratings = new List<float>(); ///Utworzenie listy przechowująca zmienne typu float (oceny)
 
         //Zachowania
 
@@ -34,7 +34,7 @@ namespace StudentDiary
                 sum += rating;
             }
 
-            avg = sum / ratings.Count; //wyliczenie średniej
+            avg = sum / ratings.Count(); //wyliczenie średniej
 
             return avg;
         }
@@ -44,7 +44,7 @@ namespace StudentDiary
         ///</summary>>
         public float GetMaxRating()
         {
-            return ratings.Max;
+            return ratings.Max();
         }
 
         ///<summary>
@@ -52,7 +52,7 @@ namespace StudentDiary
         ///</summary>>
         public float GetMinRating()
         {
-            return ratings.Min;
+            return ratings.Min();
         }
 
     }
