@@ -8,24 +8,31 @@ namespace StudentDiary2
 {
     class Diary
     {
-        public Diary()
+        public Diary() //konstruktor
         {
-            ratings = new List<float>(); //Utworzenie listy ocen
+            ratings = new List<float>(); //utworzenie listy ocen
         }
 
         //Stan (zmienne - pola)
-        List<float> ratings;
+        private List<float> ratings; //lista ocen
 
         //Zachowania
         ///<summary>
-        ///Metoda dodająca oceny do listy
+        ///Dodanie ocen do listy
         ///</summary>>
         public void AddRating(float rating) 
         {
-            ratings.Add(rating);
+            if (rating >= 0 && rating <=10) //sprawdzenie poprawności wprowadzanej oceny
+            {
+                ratings.Add(rating);
+            }
+            
         }
 
-        internal DiaryStatistics ComputeStatistics()
+        ///<summary>
+        ///Wyliczenie statystyk dzienniczka
+        ///</summary>>
+        public DiaryStatistics ComputeStatistics()
         {
             DiaryStatistics stats = new DiaryStatistics();
 
