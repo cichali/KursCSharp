@@ -12,27 +12,19 @@ namespace StudentDiary2
         {
             Diary diary = new Diary();
 
-            diary.AddRating(5);
-            diary.AddRating(8.5f);
-            diary.AddRating(4.7f);
+            diary.AddRating(3f);
+            diary.AddRating(5f);
+            diary.AddRating(11f);
 
-            DiaryStatistics stats = diary.ComputeStatistics();
-
-            Console.WriteLine("Średnia ocen :" + stats.averageGrade);
-            Console.WriteLine("Najwyższa ocena :" + stats.maxGrade);
-            Console.WriteLine("Najniższa ocena :" + stats.minGrade);
+            Console.WriteLine(Diary.maxGrade);
 
             Diary diary2 = new Diary();
+            Diary diary3 = new Diary();
+            Diary diary4 = new Diary();
+            Diary diary5 = new Diary();
+            Diary diary6 = new Diary();
 
-            diary2.AddRating(5);
-            diary2.AddRating(8.5f);
-            diary2.AddRating(3.7f);
-
-            stats = diary2.ComputeStatistics();
-
-            Console.WriteLine("Średnia ocen :" + stats.averageGrade);
-            Console.WriteLine("Najwyższa ocena :" + stats.maxGrade);
-            Console.WriteLine("Najniższa ocena :" + stats.minGrade);
+            Console.WriteLine(Diary.count);
         }
     }
 }

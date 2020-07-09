@@ -11,10 +11,15 @@ namespace StudentDiary2
         public Diary() //konstruktor
         {
             ratings = new List<float>(); //utworzenie listy ocen
+            count++; //zwiększenie licznika wywołań konstruktora
         }
 
         //Stan (zmienne - pola)
         private List<float> ratings; //lista ocen
+
+        public static float minGrade = 0;
+        public static float maxGrade = 10;
+        public static long count = 0; //licznik wywołań kostruktora
 
         //Zachowania
         ///<summary>
