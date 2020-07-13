@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Typy
 {
-    class Diary
+    public class Diary
     {
         public Diary() //konstruktor
         {

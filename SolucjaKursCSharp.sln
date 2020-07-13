@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentDiary2", "StudentDia
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Typy", "Typy\Typy.csproj", "{90072394-54B3-43CC-A387-E8190875E4D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Typy.Tests", "Typy.Tests\Typy.Tests.csproj", "{0CE36403-23AB-4CCE-AF99-42DD35CFC67E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{90072394-54B3-43CC-A387-E8190875E4D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90072394-54B3-43CC-A387-E8190875E4D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90072394-54B3-43CC-A387-E8190875E4D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CE36403-23AB-4CCE-AF99-42DD35CFC67E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE36403-23AB-4CCE-AF99-42DD35CFC67E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE36403-23AB-4CCE-AF99-42DD35CFC67E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE36403-23AB-4CCE-AF99-42DD35CFC67E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
