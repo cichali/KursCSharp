@@ -16,9 +16,14 @@ namespace Members
             diary.AddRating(8.4f);
 
             DiaryStatistics stats = diary.ComputeStatistics();
-            WriteResult("Average", stats.AverageGrade, 3, 5, 7 ,8 ,9);
-            WriteResult("Max", (int)stats.MaxGrade);
-            WriteResult("Min", (long)stats.MinGrade, 1);
+            //WriteResult("Average", stats.AverageGrade, 3, 5, 7 ,8 ,9);
+            //WriteResult("Max", (int)stats.MaxGrade);
+            //WriteResult("Min", (long)stats.MinGrade, 1);
+
+            diary.Name = "Dzienniczek Kuby";
+            diary.Name = "";
+            diary.Name = null;
+            Console.WriteLine(diary.Name);
         }
 
         static void WriteResult(string description, params float[] result)
