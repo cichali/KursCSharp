@@ -20,10 +20,23 @@ namespace Members
             //WriteResult("Max", (int)stats.MaxGrade);
             //WriteResult("Min", (long)stats.MinGrade, 1);
 
+            diary.NameChanged += new NameChangedDelegate(OnNameChanged);
+            diary.NameChanged += new NameChangedDelegate(OnNameChanged2);
+
+
             diary.Name = "Dzienniczek Kuby";
-            diary.Name = "";
-            diary.Name = null;
+            diary.Name = "Jacek";
             Console.WriteLine(diary.Name);
+        }
+
+        private static void OnNameChanged(string existingName, string newName)
+        {
+            Console.WriteLine($"Zmiana nazwy z {existingName} na {newName}");
+        }
+
+        private static void OnNameChanged2(string existingName, string newName)
+        {
+            Console.WriteLine("************************************************");
         }
 
         static void WriteResult(string description, params float[] result)
