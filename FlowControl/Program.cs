@@ -14,7 +14,15 @@ namespace FlowControl
         static void Main(string[] args)
         {
             //InstructionIf();
+            //InstructionSwitch();
 
+
+
+            Console.ReadKey();
+        }
+
+        private static void InstructionSwitch()
+        {
             Console.WriteLine("Podaj swoje imię");
             name = Console.ReadLine();
 
@@ -31,8 +39,6 @@ namespace FlowControl
                     Method4();
                     break;
             }
-
-            Console.ReadKey();
         }
 
         private static void InstructionIf()
