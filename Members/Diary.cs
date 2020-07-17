@@ -31,18 +31,21 @@ namespace Members
             }
             set
             {
-                if (!string.IsNullOrEmpty(value))
+                if (string.IsNullOrEmpty(value))
                 {
-                    if (_name != value)
-                    {
-                        NameChangedEventArgs args = new NameChangedEventArgs();
-                        args.ExistingName = _name;
-                        args.NewName = value;
-                        NameChanged(this, args);
-                    }
-
-                    _name = value;
+                    throw new ArgumentNullException("Nazwa nie może być pusta");
                 }
+
+                if (_name != value && NameChanged != null)
+                {
+                    NameChangedEventArgs args = new NameChangedEventArgs();
+                    args.ExistingName = _name;
+                    args.NewName = value;
+                    NameChanged(this, args);
+                }
+
+                _name = value;
+
             }
         }
 
@@ -53,13 +56,13 @@ namespace Members
         ///<summary>
         ///Dodanie ocen do listy
         ///</summary>>
-        public void AddRating(float rating) 
+        public void AddRating(float rating)
         {
-            if (rating >= 0 && rating <=10) //sprawdzenie poprawności wprowadzanej oceny
+            if (rating >= 0 && rating <= 10) //sprawdzenie poprawności wprowadzanej oceny
             {
                 ratings.Add(rating);
             }
-            
+
         }
 
         ///<summary>
@@ -79,7 +82,7 @@ namespace Members
             stats.AverageGrade = sum / ratings.Count(); //wyliczenie średniej
 
             stats.MaxGrade = ratings.Max(); //najwyższa ocena
-             
+
             stats.MinGrade = ratings.Min(); //najniższa ocena
 
             return stats;
